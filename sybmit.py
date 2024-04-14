@@ -24,8 +24,8 @@ def digit_currency(x):
 
 
 # Loading the datasets
-train = pd.read_csv('data/train.csv')
-test = pd.read_csv('data/test.csv')
+train = pd.read_csv('train.csv')
+test = pd.read_csv('test.csv')
 
 
 # seperating features(train) and labels(y) of training data
@@ -100,5 +100,5 @@ test_predictions_nb = nb_classifier.predict(t_test)
 index_values = np.arange(len(test_predictions_nb))
 predictions_df = pd.DataFrame({'ID': index_values, 'Education': test_predictions_nb})
 
-predictions_df.to_csv('220065_submission_bn_0.25_check.csv', index=False)
+predictions_df.to_csv('submission.csv', index=False)
 
